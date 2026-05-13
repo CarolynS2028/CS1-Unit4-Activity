@@ -54,3 +54,20 @@ function toggleMode() {
 // attach function to the button
 toggleBtn.addEventListener("click", toggleMode);
 
+
+
+// REVIEW
+// 1. select an HTML element for JS to target
+const hackerBtn = document.querySelector("#hacker"); 
+// 2. attach click event listener to trigger a function
+hackerBtn.addEventListener("click", setHackerMode); 
+// 3. define what happens when clicked (when event triggers function)
+function setHackerMode() {
+  body.style.background = "black";
+  body.style.fontFamily = "monospace";
+  description.style.color = "rgb(224, 0, 0)";
+  description.textContent = "YOU'VE BEEN HACKED ...:c";
+  Image.src = "";
+  
+}
+
