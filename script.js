@@ -12,6 +12,7 @@ const body = document.querySelector("body");
 const heading = document.querySelector("#main-heading");
 const description = document.querySelector("#description");
 const toggleBtn = document.querySelector("#toggle");
+const image = document.querySelector("#image");
 
 // JS can now change attributes and properties 
 heading.textContent = "Light and Dark Mode Website";
@@ -36,6 +37,8 @@ function toggleMode() {
       toggleBtn.style.color = "darkgrey";
       description.textContent = "Welcome to the Dark Side ! >.<";
       toggleBtn.textContent = "Switch to Light";
+      image.src = "sad-marin.jpg";
+      emoji.classList.remove("emoji-anim");
     }
     else {
       console.log("apply light mode");
@@ -46,6 +49,8 @@ function toggleMode() {
       toggleBtn.style.color = "lightgrey";
       description.textContent = "Welcome to the Bright Side :D";
       toggleBtn.textContent = "Switch to Dark";
+       image.src = "happy.jpg";
+     emoji.classList.remove("emoji-anim"); 
 
     }
 
@@ -59,6 +64,7 @@ toggleBtn.addEventListener("click", toggleMode);
 // REVIEW
 // 1. select an HTML element for JS to target
 const hackerBtn = document.querySelector("#hacker"); 
+const emoji = document.querySelector("#emoji");
 // 2. attach click event listener to trigger a function
 hackerBtn.addEventListener("click", setHackerMode); 
 // 3. define what happens when clicked (when event triggers function)
@@ -67,7 +73,9 @@ function setHackerMode() {
   body.style.fontFamily = "monospace";
   description.style.color = "rgb(224, 0, 0)";
   description.textContent = "YOU'VE BEEN HACKED ...:c";
-  Image.src = "";
+  Image.src = "sad-marin";
+  // ATTACHING ANIMATIONS: 
+  emoji.classList.add("emoji-anim"); 
   
 }
 
