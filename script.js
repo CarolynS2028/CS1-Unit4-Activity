@@ -17,9 +17,9 @@ const image = document.querySelector("#image");
 // JS can now change attributes and properties 
 heading.textContent = "Light and Dark Mode Website";
  // JS wrote HTML code !
-heading.style.color = "purple";
-heading.style.background = "plum";
-body.style.background = "lavender";
+heading.style.color = "lightpink";
+heading.style.background = "skyblue";
+body.style.background = "lightpink";
 
 // define what happens whne button is clicked 
 function toggleMode() {
@@ -79,3 +79,24 @@ function setHackerMode() {
   
 }
 
+const springBtn = document.querySelector("#spring"); 
+springBtn.addEventListener("click", setSpringMode);  
+function setSpringMode() {
+
+  body.style.background = "pink";
+  heading.style.background = "white";
+      heading.style.color = "lightpink;"
+      description.style.color = "white";
+      heading.style.background = "antiquewhite"; 
+      toggleBtn.style.color = "pink";
+      hackerBtn.style.color = "pink";
+      springBtn.style.color = "pink";
+      body.style.fontFamily = "monospace";
+      description.textContent = "welcome to pink mode yay ! <3";
+      toggleBtn.style.background = "antiquewhite";
+      hackerBtn.style.background = "antiquewhite";
+      springBtn.style.background = "antiquewhite";
+      image.src = "cute-marin.jpg";
+      emoji.classList.remove("emoji-anim"); 
+
+}
